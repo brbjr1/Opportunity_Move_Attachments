@@ -1,0 +1,46 @@
+<apex:page controller="Opportunity_Move_AttachmentsCon" tabStyle="Opportunity" >
+
+<apex:form > 
+
+    <apex:pageMessages id="errormsg" />
+
+
+
+    <apex:sectionHeader title="Move Attachments" subtitle=""/>
+    <apex:pageBlock id="pbmain" >
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!CompleteMove}" value="Move" reRender="errormsg"/>﻿
+            <apex:commandButton action="{!Cancel}" value="Cancel"/>﻿
+        </apex:pageBlockButtons>
+
+        <apex:pageBlockSection columns="1">
+
+        <apex:pageBlockSectionItem helpText="">
+            <apex:outputLabel value="Source Opportunity"/>
+            <apex:outputPanel >
+                <div class="requiredInput">
+                    <div class="requiredBlock"></div>
+                    <apex:inputField styleClass="requiredinput" required="false" value="{!source.OpportunityId}" />
+                </div>
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+
+
+        <apex:pageBlockSectionItem helpText="">
+            <apex:outputLabel value="Destination Opportunity"/>
+            <apex:outputPanel >
+                <div class="requiredInput">
+                    <div class="requiredBlock"></div>
+                    <apex:inputField styleClass="requiredinput" required="false" value="{!dest.OpportunityId}" />
+                </div>
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+
+    </apex:pageBlockSection>
+
+
+    </apex:pageBlock>
+
+</apex:form>
+
+</apex:page>
