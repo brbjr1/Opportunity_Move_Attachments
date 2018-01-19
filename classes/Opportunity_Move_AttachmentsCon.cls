@@ -21,7 +21,7 @@ public with sharing class Opportunity_Move_AttachmentsCon
     		ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR,  'You must select a source opportunity.'));
 
     	}
-    	else if (source ==null || source.OpportunityId  ==null)
+    	else if (dest ==null || dest.OpportunityId  ==null)
     	{
     		ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR,  'You must select a destination opportunity.'));
     	}
